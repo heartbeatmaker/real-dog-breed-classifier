@@ -1,16 +1,21 @@
 Based on https://github.com/skmatz/dog-breed-classifier
 
 
+
 # Dog Breed Classifier
 
 ## Overview
-Detect dogs in real time and discriminate breeds.  
+Detect dogs in real time and classify breeds.  
 
 ## Usage
 ```
 pip3 install -r requirements.txt
-python3 app.py [label=path/to/label] [model=path/to/model] [video=path/to/image directory]
 
+1. 'app.py' deals with videos or webcam
+python3 app.py [label=path/to/label] [model=path/to/model] [video=path/to/video]
+
+2. 'process_image.py' deals with images
+python3 process_image.py [video=path to image directory]
 ex) python process_image.py --video ./screenshot_output/
 ```
 
