@@ -1,7 +1,7 @@
 """
 Detect dogs in real time and discriminate breeds.
 
-Usage: python3 app.py [label=path/to/label] [model=path/to/model] [video=path/to/video]
+실행법: python process_image.py --video ./screenshot_output/
 """
 
 import argparse
@@ -92,7 +92,7 @@ class VideoCaptureView(DetectDogs):
                                       20 > 20 else coordinate[1] + 20
             cv2.putText(
                 img=frame,
-                text="",
+                text=self.breed_label,
                 org=(
                     x,
                     y),
