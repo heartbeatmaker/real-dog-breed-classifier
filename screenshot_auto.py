@@ -35,7 +35,7 @@ output_path  = './screenshot_output/'
 
 '''오렌지파이(서버)와 연결'''
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-socket.connect(('192.168.0.77', 8999))
+socket.connect(('192.168.0.2', 8999))
 print("서버에 연결")
 
 global capture

@@ -2,6 +2,9 @@
 Detect dogs in real time and discriminate breeds.
 
 실행법: python process_image.py --video ./screenshot_output/
+
+** AttributeError: model_path.. 에러 해결방법
+: yolo.h5 파일의 위치가 잘못된 것임. 루트에도 넣어보고, model 폴더 안, yolo 폴더 안, 넣어보고, yolo_data 폴더 안에 다 넣어볼 것
 """
 
 import argparse
@@ -92,7 +95,7 @@ class VideoCaptureView(DetectDogs):
                                       20 > 20 else coordinate[1] + 20
             cv2.putText(
                 img=frame,
-                text=self.breed_label,
+                text="",
                 org=(
                     x,
                     y),
@@ -159,10 +162,10 @@ class VideoCaptureView(DetectDogs):
                     # 강아지를 발견했다면 -> 강아지 위에 박스처리를 한 후 가공된 사진을 저장한다
                     if len(coordinates)>0:
                         count += 1
-                        print("count = "+str(count))
 
                         # 강아지 위에 박스처리를 한다
                         frame, breed_label = self.process_image(frame, coordinates)
+                        print(">> Found a dog. breed = "+breed_label+" // count = "+str(count))
                         # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
                         # output 폴더에 가공된 사진을 저장한다

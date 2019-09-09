@@ -75,7 +75,7 @@ class DetectDogs(Yolo):
             predicted_class = self.class_names[c]
 
             if predicted_class in self.target_classes:
-                print('> Found', predicted_class, end=' ')
+                # print('> Found', predicted_class, end=' ')
 
                 box = out_boxes[i]
                 top, left, bottom, right = box

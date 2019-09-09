@@ -1,7 +1,6 @@
 Based on https://github.com/skmatz/dog-breed-classifier
 
 
-
 # Dog Breed Classifier
 
 ## Overview
