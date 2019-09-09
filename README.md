@@ -1,5 +1,6 @@
 Based on https://github.com/skmatz/dog-breed-classifier
 
+YOLO 오류가 날 때는, 데이터 모델이 올바른 경로에 있는지 확인해보자
 
 # Dog Breed Classifier
 
